@@ -23,8 +23,39 @@
 }
 
 .hero h1{
-    font-size:50px;
-    margin-bottom:10px;
+    .hero h1{
+    animation: munculDariAtas 1s ease;
+}
+
+.hero p{
+    animation: munculDariBawah 1.5s ease;
+}
+
+.btn{
+    animation: munculDariBawah 2s ease;
+}
+
+@keyframes munculDariAtas{
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes munculDariBawah{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 }
 
 .hero p{
@@ -72,29 +103,19 @@
         body {
             <body>
 
-    <section class="hero">
-        <h1>Halo, Saya Tri Adi Rahayu</h1>
-        <p>Web Developer Pemula yang Sedang Belajar dan Berkembang Setiap Hari.</p>
+    <section class="portfolio">
+    <h2>Portofolio Saya</h2>
 
-        <a href="#kontak" class="btn">Hubungi Saya</a>
-    </section>
+    <div class="card">
+        <h3>Website Pertama</h3>
+        <p>Website pribadi yang dibuat menggunakan HTML dan CSS.</p>
+    </div>
 
-    <section class="skills">
-        <div class="card">
-            <h2>HTML</h2>
-            <p>Membuat struktur website modern.</p>
-        </div>
-
-        <div class="card">
-            <h2>CSS</h2>
-            <p>Membuat desain website menarik.</p>
-        </div>
-
-        <div class="card">
-            <h2>GitHub</h2>
-            <p>Mengelola dan mempublikasikan proyek.</p>
-        </div>
-    </section>
+    <div class="card">
+        <h3>Landing Page</h3>
+        <p>Halaman promosi dengan desain modern dan responsif.</p>
+    </div>
+</section>
 
 </body>
         }
