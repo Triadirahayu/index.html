@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Tri Adi</title>
 
+    <style>
+        body {
+            background-color:red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+        p {
+            color: orange;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Halo, Saya Tri Adi</h1>
+
+    <p>Saya sedang belajar web development.</p>
+
+    <button>Hubungi Saya</button>
+
+</body>
+</html>
