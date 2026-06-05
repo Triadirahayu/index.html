@@ -1,299 +1,362 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Tri Adi Rahayu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+<title>Portofolio Tri Adi Rahayu</title>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<style>
 
-        body{
-            font-family:Arial, sans-serif;
-            background:#f5f7fa;
-            color:#333;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        /* Navbar */
+html{
+    scroll-behavior:smooth;
+}
 
-        nav{
-            background:white;
-            padding:20px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            box-shadow:0 2px 10px rgba(0,0,0,0.1);
-            position:sticky;
-            top:0;
-        }
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
 
-        nav h2{
-            color:#667eea;
-        }
+/* NAVBAR */
 
-        nav ul{
-            display:flex;
-            list-style:none;
-            gap:20px;
-        }
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
 
-        nav a{
-            text-decoration:none;
-            color:#333;
-            font-weight:bold;
-        }
+.logo{
+    color:#667eea;
+    font-size:24px;
+    font-weight:bold;
+}
 
-        /* Hero */
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
 
-        .hero{
-            min-height:100vh;
-            background:linear-gradient(135deg,#667eea,#764ba2);
-            color:white;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px;
-        }
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
 
-        .hero h1{
-            font-size:50px;
-            margin-bottom:15px;
-            animation:munculAtas 1s ease;
-        }
+/* HERO */
 
-        .hero p{
-            max-width:600px;
-            font-size:20px;
-            animation:munculBawah 1.5s ease;
-        }
+.hero{
+    min-height:100vh;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
 
-        .btn{
-            margin-top:25px;
-            padding:15px 30px;
-            background:white;
-            color:#667eea;
-            text-decoration:none;
-            border-radius:30px;
-            font-weight:bold;
-            transition:0.3s;
-            animation:munculBawah 2s ease;
-        }
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
 
-        .btn:hover{
-            transform:scale(1.05);
-        }
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
 
-        /* Skills */
+.hero p{
+    max-width:650px;
+    font-size:20px;
+}
 
-        .skills{
-            padding:80px 20px;
-            text-align:center;
-        }
+.btn{
+    margin-top:25px;
+    padding:15px 30px;
+    background:white;
+    color:#667eea;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-        .skills h2{
-            margin-bottom:40px;
-        }
+.btn:hover{
+    transform:scale(1.05);
+}
 
-        .card-container{
-            display:flex;
-            justify-content:center;
-            gap:20px;
-            flex-wrap:wrap;
-        }
+/* SECTION */
 
-        .card{
-            background:white;
-            width:280px;
-            padding:25px;
-            border-radius:15px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.1);
-            transition:0.3s;
-        }
+section{
+    padding:80px 8%;
+}
 
-        .card:hover{
-            transform:translateY(-10px);
-        }
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:32px;
+}
 
-        /* Portofolio */
+/* CARD */
 
-        .portfolio{
-            padding:80px 20px;
-            text-align:center;
-            background:white;
-        }
+.card-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
 
-        .portfolio h2{
-            margin-bottom:40px;
-        }
+.card{
+    width:280px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
 
-        /* Kontak */
+.card:hover{
+    transform:translateY(-10px);
+}
 
-        .contact{
-            padding:80px 20px;
-            text-align:center;
-        }
+.card h3{
+    margin-bottom:10px;
+}
 
-        .contact p{
-            margin:10px 0;
-        }
+/* SKILLS */
 
-        /* Footer */
+.skill{
+    margin-bottom:15px;
+}
 
-        footer{
-            background:#222;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+.skill-name{
+    margin-bottom:5px;
+}
 
-        /* Animasi */
+.bar{
+    height:10px;
+    background:#ddd;
+    border-radius:10px;
+}
 
-        @keyframes munculAtas{
-            from{
-                opacity:0;
-                transform:translateY(-50px);
-            }
-            to{
-                opacity:1;
-                transform:translateY(0);
-            }
-        }
+.fill{
+    height:100%;
+    background:#667eea;
+    border-radius:10px;
+}
 
-        @keyframes munculBawah{
-            from{
-                opacity:0;
-                transform:translateY(50px);
-            }
-            to{
-                opacity:1;
-                transform:translateY(0);
-            }
-        }
+/* CONTACT */
 
-        /* Mobile */
+.contact{
+    text-align:center;
+}
 
-        @media(max-width:768px){
+.contact p{
+    margin:10px 0;
+}
 
-            nav{
-                flex-direction:column;
-                gap:10px;
-            }
+/* FOOTER */
 
-            .hero h1{
-                font-size:36px;
-            }
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-            .hero p{
-                font-size:18px;
-            }
+/* WHATSAPP */
 
-        }
+.wa{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
 
-    </style>
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .profile{
+        width:140px;
+        height:140px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Navbar -->
+<!-- NAVBAR -->
 
-    <nav>
-        <h2>Tri Adi</h2>
+<nav>
+    <div class="logo">Tri Adi</div>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portofolio</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+</nav>
 
-    <!-- Hero -->
+<!-- HERO -->
 
-    <section class="hero" id="home">
+<section class="hero" id="home">
 
-        <h1>Halo, Saya Tri Adi Rahayu</h1>
+    <img src="fotoku.jpg" alt="Foto Profil" class="profile">
 
-        <p>
-            Web Developer Pemula yang sedang belajar
-            membangun website modern dan profesional.
-        </p>
+    <h1>Halo, Saya Tri Adi Rahayu</h1>
 
-        <a href="#contact" class="btn">Hubungi Saya</a>
+    <p>
+        Web Developer Pemula yang sedang membangun
+        karier di bidang website development dan teknologi AI.
+    </p>
 
-    </section>
+    <a href="#contact" class="btn">
+        Hubungi Saya
+    </a>
 
-    <!-- Skills -->
+</section>
 
-    <section class="skills" id="skills">
+<!-- SKILLS -->
 
-        <h2>Skill Saya</h2>
+<section id="skills">
 
-        <div class="card-container">
+    <h2 class="section-title">Skill Saya</h2>
 
-            <div class="card">
-                <h3>HTML</h3>
-                <p>Membuat struktur website yang rapi.</p>
-            </div>
+    <div class="skill">
+        <div class="skill-name">HTML - 80%</div>
+        <div class="bar">
+            <div class="fill" style="width:80%"></div>
+        </div>
+    </div>
 
-            <div class="card">
-                <h3>CSS</h3>
-                <p>Membuat desain website modern dan menarik.</p>
-            </div>
+    <div class="skill">
+        <div class="skill-name">CSS - 70%</div>
+        <div class="bar">
+            <div class="fill" style="width:70%"></div>
+        </div>
+    </div>
 
-            <div class="card">
-                <h3>GitHub</h3>
-                <p>Mengelola dan mempublikasikan proyek online.</p>
-            </div>
+    <div class="skill">
+        <div class="skill-name">GitHub - 65%</div>
+        <div class="bar">
+            <div class="fill" style="width:65%"></div>
+        </div>
+    </div>
 
+</section>
+
+<!-- PORTOFOLIO -->
+
+<section id="portfolio">
+
+    <h2 class="section-title">Portofolio</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Website Pertama</h3>
+            <p>
+                Website pribadi yang dibuat menggunakan
+                HTML dan CSS.
+            </p>
         </div>
 
-    </section>
-
-    <!-- Portofolio -->
-
-    <section class="portfolio" id="portfolio">
-
-        <h2>Portofolio</h2>
-
-        <div class="card-container">
-
-            <div class="card">
-                <h3>Website Pertama</h3>
-                <p>Website pribadi menggunakan HTML dan CSS.</p>
-            </div>
-
-            <div class="card">
-                <h3>Landing Page</h3>
-                <p>Halaman modern dengan desain profesional.</p>
-            </div>
-
+        <div class="card">
+            <h3>Landing Page</h3>
+            <p>
+                Desain modern dengan tampilan profesional.
+            </p>
         </div>
 
-    </section>
+        <div class="card">
+            <h3>GitHub Pages</h3>
+            <p>
+                Website yang dipublikasikan secara online.
+            </p>
+        </div>
 
-    <!-- Kontak -->
+    </div>
 
-    <section class="contact" id="contact">
+</section>
 
-        <h2>Kontak Saya</h2>
+<!-- KONTAK -->
 
-        <p>Email: triadi27930@.com</p>
-        <p>GitHub: github.com/triadirahayu</p>
-        <p>WhatsApp: 08111451205</p>
+<section id="contact" class="contact">
 
-    </section>
+    <h2 class="section-title">Kontak</h2>
 
-    <!-- Footer -->
+    <p>Email: emailkamu@example.com</p>
 
-    <footer>
-        <p>© 2026 Tri Adi Rahayu. All Rights Reserved.</p>
-    </footer>
+    <p>GitHub: github.com/triadirahayu</p>
+
+    <p>WhatsApp: 08xxxxxxxxxx</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 Tri Adi Rahayu. All Rights Reserved.</p>
+</footer>
+
+<!-- TOMBOL WHATSAPP -->
+
+<a href="https://wa.me/6281234567890" class="wa">
+    💬
+</a>
 
 </body>
 </html>
