@@ -5,15 +5,98 @@
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+           body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:600px;
+}
+
+.btn{
+    margin-top:20px;
+    padding:15px 30px;
+    background:white;
+    color:#667eea;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.skills{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:60px 20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+};
         }
 
         body {
-            background: #0f172a;
-            color: white;
+            <body>
+
+    <section class="hero">
+        <h1>Halo, Saya Tri Adi Rahayu</h1>
+        <p>Web Developer Pemula yang Sedang Belajar dan Berkembang Setiap Hari.</p>
+
+        <a href="#kontak" class="btn">Hubungi Saya</a>
+    </section>
+
+    <section class="skills">
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Membuat struktur website modern.</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Membuat desain website menarik.</p>
+        </div>
+
+        <div class="card">
+            <h2>GitHub</h2>
+            <p>Mengelola dan mempublikasikan proyek.</p>
+        </div>
+    </section>
+
+</body>
         }
 
         /* NAVBAR */
