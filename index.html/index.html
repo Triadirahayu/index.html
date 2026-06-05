@@ -1,42 +1,60 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Website Tri Adi</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #6d4c41, #d7ccc8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
-    <style>
-        body {
-            background-color:brown;
-            font-family: Arial, sans-serif;
-            text-align: center;
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+        /* animasi */
+        animation: fadeUp 0.8s ease-out;
+    }
+
+    h1 {
+        color: #6d4c41;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #555;
+    }
+
+    .btn {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #6d4c41;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #4e342e;
+        transform: scale(1.05);
+    }
+
+    /* animasi masuk */
+    @keyframes fadeUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
         }
-
-        h1 {
-            color: yellow;
+        100% {
+            opacity: 1;
+            transform: translateY(0);
         }
-
-        p {
-            color: orange;
-            font-size: 20px;
-        }
-
-        button {
-            background-color: green;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-    </style>
-
-</head>
-<body>
-
-    <h1>Halo, Saya Tri Adi</h1>
-
-    <p>Saya sedang belajar web development.</p>
-
-    <button>Hubungi Saya</button>
-
-</body>
-</html>
+    }
+</style>
