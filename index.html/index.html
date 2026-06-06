@@ -270,66 +270,50 @@ footer{
 
 <!-- SKILLS -->
 
-<section id="skills">
-    margin: 25px auto;
-    max-width: 600px;
-    text-align: left;
+<style>
 
+#skills {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
 }
 
-    <h2 class="section-title">Skill Saya</h2>
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-    <div class="skill">
-        <div class="skill-name">HTML - 80%</div>
-        forn-weight: bold;
-        margin-buttom: 8px;
-        color: #333;
-    
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    border-radius: 50px;
+    animation: grow 2s ease-out forwards;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
     }
+}
 
-
-        <div class="bar">
-            <div class="fill" style="width:80%"></div>
-            width: 100%;
-            height:18px;
-            background: #e0e0e0;
-            border-radiu: 50px;
-            overflow: hidden;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
-        
-        }
-
-        .fill {
-            height: 100%;
-            border-radius: 50px;
-            background: linear-gradient(90deg, #4facfe, #00f2fe);
-            animation: loadBar 2s ease forwards;
-
-        }
-
-        @keyframes loadBar {
-            from {
-                width: 0;
-                
-            }
-        }
-        </div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-name">CSS - 70%</div>
-        <div class="bar">
-            <div class="fill" style="width:70%"></div>
-        </div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-name">GitHub - 65%</div>
-        <div class="bar">
-            <div class="fill" style="width:65%"></div>
-        </div>
-    </div>
-
+</style>
 </section>
 
 <!-- PORTOFOLIO -->
