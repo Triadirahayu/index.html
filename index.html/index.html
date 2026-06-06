@@ -271,13 +271,48 @@ footer{
 <!-- SKILLS -->
 
 <section id="skills">
+    margin: 25px auto;
+    max-width: 600px;
+    text-align: left;
+
+}
 
     <h2 class="section-title">Skill Saya</h2>
 
     <div class="skill">
         <div class="skill-name">HTML - 80%</div>
+        forn-weight: bold;
+        margin-buttom: 8px;
+        color: #333;
+    
+    }
+
+
         <div class="bar">
             <div class="fill" style="width:80%"></div>
+            width: 100%;
+            height:18px;
+            background: #e0e0e0;
+            border-radiu: 50px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+        
+        }
+
+        .fill {
+            height: 100%;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            animation: loadBar 2s ease forwards;
+
+        }
+
+        @keyframes loadBar {
+            from {
+                width: 0;
+                
+            }
+        }
         </div>
     </div>
 

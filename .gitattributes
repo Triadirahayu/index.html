@@ -1,2 +1,152 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+计划Day04_learn.py > ...
+
+Day 4 学习:FastAPI入门
+
+今日目标:安装FastAPI,写第一个API,理解路由和请求/响应模型。
+
+FastAPI是当前最流行的Python Web框架,特点:
+
+自动生成API文档(Swagger UI)
+
+基于类型注解自动校验参数
+
+性能极高(接近Node.js/Go)
+
+学习曲线平缓
+
+运行方式:
+
+pip install fastapi uvicorn
+
+uvicorn day04_fastapi.learn: app --reload
+
+然后打开http://127.0.0.1:8000/docs 查看自动生成的API文档
+
+from fastapi import FastAPI, HTTPException
+
+from pydantic import BaseModel, Field
+
+app FastAPI(title="Day 4学习”, version="1.0.0")
+
+#1.最简单的路由
+
+@app.get("/")
+
+async def root():
+
+return {"message": "Hello, FastAPI!"}
+
+@app.get("/health")
+
+async def health():
+
+return {"status": "ok"}
+
+#2.路径参数(URL中的变量)
+
+
+***从URL中获取user_id, FastAPI自动转为int"""
+
+@app.get("/users/{user_id}")
+
+async def get_user(user_id: int):
+
+users = {1: {"id":1,"name":"张三"},2:{"id":2,"name":"李四"}}
+
+if user_id not in users:
+
+raise HTTPException(status_code=404, detail="用户不存在")
+
+return users [user_id]
+
+
+#3.查询参数(?key=value)
+
+
+#@app.get("/search")
+
+async def search(q: str, limit: int 10, offset: int = 0):
+
+"""q是必填参数,limit和offset有默认值"""
+
+return {"query": q, "limit": limit, "offset": offset}
+
+#4. Pydantic模型(请求体校验)
+
+class UserCreate(BaseModel):
+
+name: str = Field(..., min_length=1, max_length=50)
+
+age: int Field(..., ge=0, le=150) 
+
+email: str 
+
+is_active: bool = True 
+
+# 内存数据库
+
+
+users_db = {} 
+
+user_counter = 0
+
+
+@app.post("/users", status_code=201)
+
+async def create_user(user: UserCreate):
+
+"""POST请求,创建用户"""
+
+global user_counter
+
+user_counter += 1
+
+user_data {"id": user_counter, **user.model_dump()}
+
+users_db[user_counter] = user_data
+
+return user_data
+
+@app.put("/users/{user_id)")
+
+async def update_user (user_id: int, user: UserCreate):
+
+if user_id not in users_db:
+
+raise HTTPException(status_code=404, detail="用户不存在")
+
+users_db[user_id].
+
+update(user.model_dump())
+
+return users_db[user_id]Д 
+
+@app.delete("/users/{user_id}", status_code=204)
+
+async def delete_user(user_id: int):
+
+if user_id not in users_db:
+
+raise HTTPException(status_code=404, detail="用户不存在")
+
+
+del users_db[user_id]
+
+
+
+部分总结:1.常见易错点:(1)文件名包含连字符,导致导入错误;
+
+(2)路径参数顺序错误,导致匹配不到正确的路由;
+
+(3)要先进行导包:pip install fastapi uvicorn,敲完代码后才能执行uvicorn day04_fastapi.learn: app-reload;
+
+基础路由:@app.get()定义GET请求,返回 JSON 响应;
+
+路径参数:从URL 中提取变量,自动类型转换和校验;
+
+查询参数:URL 中?key=value形式的参数,支持默认值;
+
+Pydantic 请求模型:自动校验请求体的类型和格式,返回友好的错误信息;
+
+异常处理:使用HTTPException返回标准的HTTP 错误状态码和详情;
+上述均为个人见解,若有争论,以你的为正确标准。 小羊消N
