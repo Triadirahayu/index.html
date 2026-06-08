@@ -1,408 +1,193 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Tri Adi Rahayu</title>
 
-<title>Portofolio Tri Adi Rahayu</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-<style>
+        body{
+            font-family:Arial, sans-serif;
+            background:#f4f6f9;
+            color:#333;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        header{
+            background:linear-gradient(135deg,#4f46e5,#7c3aed);
+            color:white;
+            text-align:center;
+            padding:80px 20px;
+        }
 
-html{
-    scroll-behavior:smooth;
-}
+        header img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            border:5px solid white;
+            margin-bottom:20px;
+        }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f5f7fa;
-    color:#333;
-    line-height:1.6;
-}
+        header h1{
+            font-size:42px;
+            margin-bottom:10px;
+        }
 
-/* NAVBAR */
+        header p{
+            font-size:20px;
+        }
 
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
+        section{
+            max-width:1000px;
+            margin:auto;
+            padding:50px 20px;
+        }
 
-.logo{
-    color:#667eea;
-    font-size:24px;
-    font-weight:bold;
-}
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:#4f46e5;
+        }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
-}
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom:20px;
+        }
 
-nav a{
-    text-decoration:none;
-    color:#333;
-    font-weight:bold;
-}
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            justify-content:center;
+        }
 
-/* HERO */
+        .skill{
+            background:#4f46e5;
+            color:white;
+            padding:10px 15px;
+            border-radius:30px;
+        }
 
-.hero{
-    min-height:100vh;
-    background:linear-gradient(135deg,#667eea,#764ba2);
-    color:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
 
-.profile{
-    width:200px;
-    height:200px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid white;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    margin-bottom:20px;
+        .project{
+            background:white;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
 
-.hero h1{
-    font-size:50px;
-    margin-bottom:15px;
-}
+        footer{
+            background:#111827;
+            color:white;
+            text-align:center;
+            padding:30px;
+        }
 
-.hero p{
-    max-width:650px;
-    font-size:20px;
-}
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            background:white;
+            color:#4f46e5;
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:bold;
+        }
 
-.btn{
-    margin-top:25px;
-    padding:15px 30px;
-    background:white;
-    color:#667eea;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-/* SECTION */
-
-section{
-    padding:80px 8%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:32px;
-}
-
-/* CARD */
-
-.card-container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:25px;
-}
-
-.card{
-    width:280px;
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-/* SKILLS */
-
-.skill{
-    margin-bottom:15px;
-}
-
-.skill-name{
-    margin-bottom:5px;
-}
-
-.bar{
-    height:10px;
-    background:#ddd;
-    border-radius:10px;
-}
-
-.fill{
-    height:100%;
-    background:#667eea;
-    border-radius:10px;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    margin:10px 0;
-}
-
-/* FOOTER */
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-/* WHATSAPP */
-
-.wa{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.3);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    nav{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero h1{
-        font-size:36px;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    .profile{
-        width:140px;
-        height:140px;
-    }
-}
-
-</style>
+        .btn:hover{
+            background:#e5e7eb;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
+    <header>
+        <!-- Ganti foto-saya.jpg dengan nama file fotomu -->
+        <img src="foto tri adi.jpeg" alt="Foto Tri Adi">
 
-<nav>
-    <div class="logo">Tri Adi</div>
+        <h1>Tri Adi Rahayu</h1>
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portofolio</a></li>
-        <li><a href="#contact">Kontak</a></li>
-    </ul>
-</nav>
+        <p>Web Developer Pemula | Siap Membantu Membuat Website Modern</p>
 
-<!-- HERO -->
+        <a href="#kontak" class="btn">Hubungi Saya</a>
+    </header>
 
-<section class="hero" id="home">
-
-    <img src="foto tri adi.jpeg" alt="Foto Profil" class="profile">
-
-    <h1>Halo, Saya Tri Adi Rahayu</h1>
-
-    <p>
-        Web Developer Pemula yang sedang membangun
-        karier di bidang website development dan teknologi AI.
-    </p>
-
-    <a href="#contact" class="btn">
-        Hubungi Saya
-    </a>
-
-</section>
-
-<!-- SKILLS -->
-
-<style>
-
-#skills {
-
-    <section id="skills">
-
-    <h2 class="section-title">Skill Saya</h2>
-
-    <div class="skill">
-        <div class="skill-name">HTML - 80%</div>
-        <div class="bar">
-            <div class="fill" style="width:80%;"></div>
-        </div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-name">CSS - 70%</div>
-        <div class="bar">
-            <div class="fill" style="width:70%;"></div>
-        </div>
-    </div>
-
-    <div class="skill">
-        <div class="skill-name">GitHub - 65%</div>
-        <div class="bar">
-            <div class="fill" style="width:65%;"></div>
-        </div>
-    </div>
-
-</section>
-
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.skill {
-    margin-bottom: 25px;
-}
-
-.skill-name {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.bar {
-    width: 100%;
-    height: 20px;
-    background-color: #e0e0e0;
-    border-radius: 50px;
-    overflow: hidden;
-}
-
-.fill {
-    height: 100%;
-    background: linear-gradient(90deg, #4facfe, #00f2fe);
-    border-radius: 50px;
-    animation: grow 2s ease-out forwards;
-}
-
-@keyframes grow {
-    from {
-        width: 0;
-    }
-}
-
-</style>
-</section>
-
-<!-- PORTOFOLIO -->
-
-<section id="portfolio">
-
-    <h2 class="section-title">Portofolio</h2>
-
-    <div class="card-container">
+    <section>
+        <h2>Tentang Saya</h2>
 
         <div class="card">
-            <h3>Website Pertama</h3>
             <p>
-                Website pribadi yang dibuat menggunakan
-                HTML dan CSS.
+                Halo! Saya Tri Adi Rahayu. Saat ini saya sedang mempelajari
+                Web Development dan fokus membangun website yang sederhana,
+                modern, dan responsif. Saya terus mengembangkan kemampuan
+                HTML, CSS, dan GitHub untuk mempersiapkan diri menjadi
+                freelancer profesional.
             </p>
         </div>
+    </section>
+
+    <section>
+        <h2>Keahlian</h2>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">Responsive Design</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Proyek Saya</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Website Profil Pribadi</h3>
+                <p>Website perkenalan diri menggunakan HTML dan CSS.</p>
+            </div>
+
+            <div class="project">
+                <h3>Landing Page</h3>
+                <p>Halaman promosi produk dengan desain modern.</p>
+            </div>
+
+            <div class="project">
+                <h3>Portofolio Online</h3>
+                <p>Website untuk menampilkan kemampuan dan proyek.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak</h2>
 
         <div class="card">
-            <h3>Landing Page</h3>
-            <p>
-                Desain modern dengan tampilan profesional.
-            </p>
+            <p><strong>Email:</strong> emailkamu@gmail.com</p>
+            <p><strong>GitHub:</strong> github.com/usernamekamu</p>
+            <p><strong>Status:</strong> Terbuka untuk proyek freelance.</p>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>GitHub Pages</h3>
-            <p>
-                Website yang dipublikasikan secara online.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- KONTAK -->
-
-<section id="contact" class="contact">
-
-    <h2 class="section-title">Kontak</h2>
-
-    <p>Email: triadi27930@gmail.com</p>
-
-    <p>GitHub: github.com/triadirahayu</p>
-
-    <p>WhatsApp: 08111451205</p>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-    <p>© 2026 Tri Adi Rahayu. All Rights Reserved.</p>
-</footer>
-
-<!-- TOMBOL WHATSAPP -->
-
-<a href="https://wa.me/628111451205" class="wa">
-    💬
-</a>
+    <footer>
+        <p>© 2026 Tri Adi Rahayu | Portofolio Web Developer</p>
+    </footer>
 
 </body>
 </html>
