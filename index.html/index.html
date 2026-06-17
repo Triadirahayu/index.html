@@ -84,10 +84,17 @@
         }
 
         .project{
-            background:white;
-            padding:20px;
-            border-radius:15px;
-            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
         }
 
         footer{
@@ -128,6 +135,28 @@
 
     <section>
         <h2>Tentang Saya</h2>
+        <section>
+    <h2>Statistik</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <h3>3+</h3>
+            <p>Proyek Website</p>
+        </div>
+
+        <div class="project">
+            <h3>100%</h3>
+            <p>Semangat Belajar</p>
+        </div>
+
+        <div class="project">
+            <h3>24/7</h3>
+            <p>Siap Berkembang</p>
+        </div>
+
+    </div>
+</section>
 
         <div class="card">
             <p>
@@ -175,8 +204,6 @@
         </div>
     </section>
 
-    <section id="kontak">
-        <h2>Kontak</h2>
         <section>
     <h2>Mengapa Memilih Saya?</h2>
 
@@ -191,6 +218,12 @@
         <div class="card">
             <p><strong>Email:</strong> triadi27930@gmail.com</p>
             <p><strong>GitHub:</strong> github.com/triadi27930</p>
+
+<a href="https://github.com/triadi27930"
+   target="_blank"
+   class="btn">
+   Lihat GitHub Saya
+</a>
             <p><strong>Status:</strong> Terbuka untuk proyek freelance.</p>
         </div>
     </section>
