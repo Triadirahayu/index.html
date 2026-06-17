@@ -6,6 +6,26 @@
     <title>Portofolio Tri Adi Rahayu</title>
 
     <style>
+        nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#4f46e5;
+}
         *{
             margin:0;
             padding:0;
@@ -117,11 +137,46 @@
 
         .btn:hover{
             background:#e5e7eb;
+            html{
+    scroll-behavior:smooth;
+}
+
+header{
+    position:relative;
+    overflow:hidden;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,0.1);
+    border-radius:50%;
+    top:-100px;
+    left:-100px;
+}
+
+header::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:rgba(255,255,255,0.05);
+    border-radius:50%;
+    bottom:-200px;
+    right:-150px;
+}
         }
     </style>
 </head>
 <body>
-
+<nav>
+    <a href="#">Home</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#proyek">Proyek</a>
+    <a href="#kontak">Kontak</a>
+</nav>
     <header>
         <!-- Ganti foto-saya.jpg dengan nama file fotomu -->
         <img src="foto tri adi.jpeg" alt="Foto Tri Adi">
@@ -133,8 +188,8 @@
         <a href="#kontak" class="btn">Hubungi Saya</a>
     </header>
 
-    <section>
-        <h2>Tentang Saya</h2>
+    <section id="project">
+        <h2>Project Saya</h2>
         <section>
     <h2>Statistik</h2>
 
